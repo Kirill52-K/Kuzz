@@ -7,6 +7,7 @@ namespace TodolistApp.Managers
     internal class TodolistManager
     {
         private List<TodoItem> _todolist = new List<TodoItem>();
+        private int _nextId;
 
         // Конструктор менеджера
         public TodolistManager()
@@ -32,6 +33,19 @@ namespace TodolistApp.Managers
                     Console.WriteLine($"{item.Id}. {item.GetStatusDisplay()} {item.Description}");
                 }
                 Console.WriteLine("---");
+            }
+        }
+        // Метод для добавления новой задачи
+        public void AddTask(string description)
+        {
+            if (!string.IsNullOrWhiteSpace(description))
+            {
+                _todolist.Add(new TodoItem(_nextId++, description));
+                Console.WriteLine("Task added successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Task description cannot be empty.");
             }
         }
     }
