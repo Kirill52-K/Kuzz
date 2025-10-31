@@ -7,7 +7,7 @@ namespace TodolistApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the To-Do List Application!");
+            Console.WriteLine("Your Personal To-Do Manager");
 
             // Создаем экземпляр менеджера списка дел
             var todoManager = new TodolistManager();
