@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TodolistApp.Managers;
 
 namespace TodolistApp
@@ -7,7 +8,11 @@ namespace TodolistApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Your Personal To-Do Manager");
+
+            Console.WriteLine("Welcome to the Enhanced To - Do List");
+
+            Console.WriteLine("Welcome to the Enhanced To - Do List!");
+
 
             // Создаем экземпляр менеджера списка дел
             var todoManager = new TodolistManager();
